@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://izo-rajcic.hr/sitemap.xml
