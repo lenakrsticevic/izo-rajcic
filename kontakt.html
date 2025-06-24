@@ -65,7 +65,7 @@
                                 <input type="text" class="form-control form-control-lg" id="ime" name="ime" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="telefon" class="form-label fw-semibold">Telefon *</label>
+                                <label for="telefon" class="form-label fw-semibold">Kontakt telefon *</label>
                                 <input type="tel" class="form-control form-control-lg" id="telefon" name="telefon" required>
                             </div>
                             <div class="col-12">
@@ -80,6 +80,7 @@
                                     <option value="temelji">Zaštita temelja od vlage</option>
                                     <option value="terase">Hidroizolacija terasa i balkona</option>
                                     <option value="dijamantno">Profesionalno dijamantno bušenje</option>
+                                    <option value="bitumenska">Bitumenska hidroizolacija</option>
                                     <option value="ostalo">Ostalo</option>
                                 </select>
                             </div>
@@ -185,6 +186,39 @@
     <script src="lib/wow/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init({ once: true, duration: 800 });</script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form[action^="mailto:"]');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const ime = document.getElementById('ime').value;
+                const telefon = document.getElementById('telefon').value;
+                const email = document.getElementById('email').value;
+                const usluga = document.getElementById('usluga').options[document.getElementById('usluga').selectedIndex].text;
+                const poruka = document.getElementById('poruka').value;
+                const mailto = `mailto:izorajcic@gmail.com?subject=Upit%20za%20hidroizolaciju&body=Ime%20i%20prezime%3A%20${encodeURIComponent(ime)}%0AKontakt%20broj%3A%20${encodeURIComponent(telefon)}%0AEmail%3A%20${encodeURIComponent(email)}%0AUsluga%3A%20${encodeURIComponent(usluga)}%0A%0A${encodeURIComponent(poruka)}`;
+                window.location.href = mailto;
+            });
+        }
+        // WhatsApp gumb - šalje iste podatke kao email
+        const waBtn = document.querySelector('a[href^="https://wa.me/"]');
+        if (waBtn) {
+            waBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const ime = document.getElementById('ime').value;
+                const telefon = document.getElementById('telefon').value;
+                const email = document.getElementById('email').value;
+                const usluga = document.getElementById('usluga').options[document.getElementById('usluga').selectedIndex].text;
+                const poruka = document.getElementById('poruka').value;
+                const waMsg = `Ime i prezime: ${ime}\nKontakt broj: ${telefon}\nEmail: ${email}\nUsluga: ${usluga}\n\n${poruka}`;
+                const waUrl = `https://wa.me/385923300212?text=${encodeURIComponent(waMsg)}`;
+                window.open(waUrl, '_blank');
+            });
+        }
+    });
+    </script>
 
     <style>
     .navbar .nav-link {
