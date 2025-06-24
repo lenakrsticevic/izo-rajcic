@@ -50,7 +50,7 @@
 
 
     <!-- Sekcija s karticama/slikama -->
-    <section class="container py-5">
+    <section class="container py-5 section-shadow">
         <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
             <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
                 <div class="card h-100 border-0">
@@ -76,7 +76,7 @@
     </section>
 
     <!-- Info sekcija -->
-    <section class="bg-white py-5">
+    <section class="bg-white py-5 section-contrast">
         <div class="row g-4 text-center">
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="p-4 bg-white h-100 shadow-sm rounded-4 border-0">
@@ -108,17 +108,43 @@
         </div>
     </section>
 
+    <!-- Dodatne slike radova -->
+<section class="container py-4 section-shadow">
+    <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card h-100 border-0">
+                <img src="r5.jpeg" class="card-img-top" alt="Rad 5">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card h-100 border-0">
+                <img src="r6.jpeg" class="card-img-top" alt="Rad 6">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
+            <div class="card h-100 border-0">
+                <img src="r7.jpeg" class="card-img-top" alt="Rad 7">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="600">
+            <div class="card h-100 border-0">
+                <img src="db1.jpeg" class="card-img-top" alt="Dijamantno bušenje">
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Call to Action sekcija -->
-    <section class="bg-very-light py-5 text-center" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/pozadina.jpg') center/cover no-repeat; border-radius: 1.5rem; margin: 2rem auto; max-width: 1000px; box-shadow: 0 4px 24px 0 rgba(0,174,239,0.10);" data-aos="fade-up" data-aos-delay="200">
+    <section class="py-5 text-center section-contrast" style="background: linear-gradient(135deg, #e6f7fd 0%, #cceaf6 100%); border-radius: 1.5rem; margin: 2rem auto; max-width: 1000px; box-shadow: 0 4px 24px 0 rgba(0,174,239,0.10);" data-aos="fade-up" data-aos-delay="200">
         <div class="container">
-            <h2 class="fw-bold mb-3">Kontaktirajte nas i osigurajte zaštitu od vlage već danas!</h2>
+            <h2 class="fw-bold mb-3 text-primary">Kontaktirajte nas i osigurajte zaštitu od vlage već danas!</h2>
             <p class="lead mb-4">Imate pitanja, želite zatražiti ponudu ili dogovoriti sastanak? Naš tim stoji vam na raspolaganju.</p>
             <a href="kontakt.html" class="btn btn-lg btn-light text-primary fw-semibold shadow-sm px-4 py-2" data-aos="zoom-in" data-aos-delay="400">Kontakt</a>
         </div>
     </section>
 
     <!-- Kontakt Info sekcija -->
-    <section class="bg-light py-5 border-top">
+    <section class="bg-light py-5 border-top section-shadow">
         <div class="container">
             <div class="row g-4 align-items-center justify-content-center text-center text-md-start">
                 <div class="col-12 col-md-4">
@@ -189,6 +215,21 @@
         background: #181c22 !important;
         color: #fff !important;
         border-top: 2px solid #00AEEF;
+    }
+    .card-img-top {
+        height: 300px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+    }
+    /* Kontrastne sekcije */
+    .section-contrast {
+        background: #f4f8fb;
+        box-shadow: 0 8px 32px 0 rgba(0,174,239,0.07);
+        border-radius: 1.5rem;
+    }
+    .section-shadow {
+        box-shadow: 0 8px 32px 0 rgba(0,174,239,0.10);
+        border-radius: 1.5rem;
     }
     </style>
 </body>
